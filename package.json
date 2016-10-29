@@ -1,0 +1,23 @@
+{
+  "name": "mysql-generator",
+  "version": "1.0.3",
+  "description": "mysql generator",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "keywords": [
+    "mysql",
+    "generator"
+  ],
+  "author": "yunlong",
+  "engines": {
+    "node": "~4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyocn/mysql-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyocn/mysql-generator/issues"
+  },
+  "license": "MIT"
+}
