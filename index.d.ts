@@ -10,7 +10,7 @@ declare namespace SqlGenerator {
 	 */
 	interface Select extends Base{
 
-		from(tableName: string, tableAlias: string): Select;
+		from(tableName: string, tableAlias?: string): Select;
 
 		from(table: Select, tableAlias: string): Select;
 
@@ -111,13 +111,13 @@ declare namespace SqlGenerator {
 	 */
 	interface Delete extends Base{
 
-		from(tableName: string): Insert;
+		from(tableName: string): Delete;
 
-		where(condition: string, ...values: string[]): Insert;
+		where(condition: string, ...values: string[]): Delete;
 
-		orderBy(orderBy: string, sortDirection?: string): Insert;
+		orderBy(orderBy: string, sortDirection?: string): Delete;
 
-		limit(pageSize: number): Insert;
+		limit(pageSize: number): Delete;
 
 		/**
 		 * return sql statement
