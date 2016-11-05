@@ -16,17 +16,17 @@ declare namespace SqlGenerator {
 
 		field(field: string, fieldAlias?: string): Select;
 
-		leftJoin(tableName: string, tableAlias: string, onCondition: string): Select;
+		leftJoin(tableName: string, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
-		leftJoin(table: Select, tableAlias: string, onCondition: string): Select;
+		leftJoin(table: Select, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
-		rightJoin(tableName: string, tableAlias: string, onCondition: string): Select;
+		rightJoin(tableName: string, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
-		rightJoin(table: Select, tableAlias: string, onCondition: string): Select;
+		rightJoin(table: Select, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
-		innerJoin(tableName: string, tableAlias: string, onCondition: string): Select;
+		innerJoin(tableName: string, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
-		innerJoin(table: Select, tableAlias: string, onCondition: string): Select;
+		innerJoin(table: Select, tableAlias: string, onCondition: string, ...values: string[]): Select;
 
 		union(table: Select, all?: boolean): Select;
 
