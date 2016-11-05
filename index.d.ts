@@ -8,7 +8,7 @@ declare namespace SqlGenerator {
 	/**
 	 * Select Table
 	 */
-	interface Select extends Base{
+	interface Select extends Base {
 
 		from(tableName: string, tableAlias?: string): Select;
 
@@ -28,6 +28,8 @@ declare namespace SqlGenerator {
 
 		innerJoin(table: Select, tableAlias: string, onCondition: string): Select;
 
+		union(table: Select, all?: boolean): Select;
+
 		where(condition: string, ...values: string[]): Select;
 
 		orderBy(orderBy, sortDirection?: string): Select;
@@ -44,7 +46,7 @@ declare namespace SqlGenerator {
 	/**
 	 * Update Table
 	 */
-	interface Update extends Base{
+	interface Update extends Base {
 
 		escape(value: Object): string;
 
@@ -72,7 +74,7 @@ declare namespace SqlGenerator {
 	/**
 	 * Insert Table
 	 */
-	interface Insert extends Base{
+	interface Insert extends Base {
 
 		into(tableName: string): Insert;
 
@@ -109,7 +111,7 @@ declare namespace SqlGenerator {
 	/**
 	 * Delete Table
 	 */
-	interface Delete extends Base{
+	interface Delete extends Base {
 
 		from(tableName: string): Delete;
 

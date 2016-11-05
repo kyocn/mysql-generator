@@ -1,6 +1,6 @@
 {
   "name": "mysql-generator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "mysql generator",
   "main": "./index.js",
   "typings": "./index.d.ts",
